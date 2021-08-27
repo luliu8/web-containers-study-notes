@@ -36,11 +36,11 @@ We can use Abstract class that implement Servlet interface to common logics. Ser
 ### Web apps
 Servlets are deployed through webapps. webapp follow directory structure similar to this: 
 `
-| -  MyWebApp
-      | -  WEB-INF/web.xml        -- configure servlets
-      | -  WEB-INF/lib/           -- Jars needed for the webapp
-      | -  WEB-INF/classes/       
-      | -  META-INF/              
+	| -  MyWebApp 
+		| -  WEB-INF/web.xml        -- configure servlets 
+		| -  WEB-INF/lib/           -- Jars needed for the webapp 
+		| -  WEB-INF/classes/      
+		| -  META-INF/              
 `
 Servlet spec defined `ServletContext` interface. \
 When Servlet container starts, it will load the webapp, and create a unique ServletContext instance. A webapp can have multiple Servlet, they share data through the global ServletContext instance, including: initiation configurations, resources. Since ServletContext hold all Servlet instances,it can redirect servlet request from one servlet to another. 
